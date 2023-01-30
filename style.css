@@ -1,0 +1,250 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #1A223B;
+  color: #eaeaea;
+  display:flex;
+  /* flex-wrap merupakan bagian dari metode responsive */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  margin-right: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+}
+
+.logo-title {
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #FF6A3D;
+  /* 0s = tanpa delay */
+  transition: all .5s ease 0s;
+  transform: rotate(2deg);
+}
+
+nav ul {
+  display: flex;
+  padding: 20px;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+li a {
+  display: inline-block;
+}
+
+li a:hover {
+  color: #FF6A3D;
+  /* 0s = tanpa delay */
+  transition: all .5s ease 0s;
+  transform: rotate(2deg);
+}
+
+a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+
+.btn-cta {
+  margin-right: 30px;
+  border: none;
+  /* padding atas-bawah, kiri-kanan */
+  padding: 6px 12px;
+  font-size: 20px;
+  background-color: #FF6A3D;
+  color: #eaeaea;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* shorthand padding atas-bawah, kiri-kanan */
+  padding: 50px 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.img-foto {
+  /* mengurangi size dari foto, tanpa crop. bagian dari responsive */
+  /* width: 80%; */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 10px;
+}
+
+.parallax {
+  background-image: url(assets/foto/DJI_0464.JPG);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  background-color: #1A223B;
+  color: #eaeaea;
+  padding: 20px;
+}
+
+.mt-10 {
+  margin-top: 20px;
+}
+
+.card {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-item {
+  text-align: center; /* agar icon dapat ke tengah */
+  /* margin sebabkan card bergeser ke kanan saat mobile version */
+  /* margin: 5px; */
+  width: 25%;
+  min-height: 200px;
+  max-height: 300px;
+  background-color: #f7f7f7;
+  color: #222;
+  padding: 30px;
+  box-shadow: 4px 5px 3px 2px rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 4px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  /* padding: 4px; */
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #1A223B;
+  color: #eaeaea;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding: 10px 0px;
+  }
+
+  .parallax {
+    height: 110vh;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .card {
+    /* langsung flex-direction, karena diatas sudah dideklarasikan */
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-item {
+    width: 80%;
+    padding: 30px;
+    opacity: .85;
+  }
+
+  .container {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .intro {
+    margin-top: 20px;
+    /* margin-bottom: 50px; */
+  }
+
+  .img-foto {
+    margin-top: 10px;
+    padding: 0px;
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: #1A223B;
+    padding: 0;
+  }
+
+  footer {
+    margin-bottom: 75px;
+    /* margin-top: 50px; */
+  }
+}

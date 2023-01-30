@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web bintang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/icons/partner.png" alt="ini logo" class="logo-img" />
+      <h1 class="logo-title">BTG</h1>
+    </div>
+    <!-- navbar start -->
+    <nav>
+      <ul>
+        <li><a href="#service">SERVICE</a></li>
+        <li><a href="mailto:haridaramadhan@gmail.com">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- cta = call to action -->
+    <button class="btn-cta" onclick="redirInstagram()">follow saya</button>
+  </header>
+
+  <div class="container">
+    <div class="intro">
+      <p class="title">Hello, bintang harida here !</p>
+      <p class="description">professional drone pilot in boyolali</p>
+      <img src="assets/foto/IMG_9969 (1).JPG" alt="fotonya bintang" class="img-foto" />
+    </div>
+  </div>
+  
+  <div class="parallax">
+    <div class="about">
+      <p class="title">saya adalah programmer</p>
+      <p class="description">ngoding aja dulu, jago belakangan</p>
+      <div class="mt-10">
+        <button class="btn-cta" onclick="redirWhatsapp()">hubungi saya</button>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="card" id="service">
+        <div class="card-item">
+          <img src="assets/icons/partner.png" alt="icon-1" class="icons" />
+          <p class="card-title">kerja sama</p>
+          <p class="card-description">akan membantu anda menentukan website yang anda butuhkan</p>
+        </div>
+        <div class="card-item">
+          <img src="assets/icons/rating.png" alt="icon-2" class="icons" />
+          <p class="card-title">programmer handal</p>
+          <p class="card-description">mau bagus dan cepat? jangan minta murah</p>
+        </div>
+        <div class="card-item">
+          <img src="assets/icons/wrench.png" alt="icon-3" class="icons" />
+          <p class="card-title">aman dari segala bugs</p>
+          <p class="card-description">proses development yang professional dan minim bug</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="card-description">&copy; Bintang Harida Website 2023</p>
+  </footer>
+
+  <script>
+    let redirInstagram = ()=> {
+      window.location.href = "https://instagram.com/bintanghrr"
+    }
+
+    let redirWhatsapp = ()=> {
+      window.location.href = "https://wa.me/6281391561584"
+    }
+  </script>
+</body>
+</html>
